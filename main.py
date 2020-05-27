@@ -6,7 +6,7 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 
-batch_size = 128
+batch_size = 64
 num_classes = 10
 epochs = 1
 
@@ -42,7 +42,6 @@ model.add(Conv2D(32, kernel_size=(3, 3),
                  activation='relu',
                  input_shape=input_shape))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-model.add(Dropout(0.25))
 model.add(Flatten())
 model.add(Dense(num_classes, activation='softmax'))
 
