@@ -50,6 +50,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
 model.fit(x_train, y_train,
+          steps_per_epoch=10000,
           epochs=epochs,
           verbose=1,
           validation_data=(x_test, y_test))
