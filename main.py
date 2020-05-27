@@ -6,7 +6,7 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 
-batch_size = 1
+#batch_size = 1
 num_classes = 10
 epochs = 1
 
@@ -50,7 +50,6 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
 model.fit(x_train, y_train,
-          batch_size=batch_size,
           epochs=epochs,
           verbose=1,
           validation_data=(x_test, y_test))
